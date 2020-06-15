@@ -1,0 +1,117 @@
+:root{
+    /* main colors are the darkest colors used and all secondary and tertiary colors after the main color are lighter than the main color
+        if there is a color darker than the main color it goes by a different name
+     */
+
+     /* Colors being used */
+     --main_blue:rgb(0, 7, 80);
+     --secondary_blue: rgb(13, 86, 190); 
+     --tertiary_blue: rgb(11, 71, 145);
+     --main_background_white: rgb(240, 240, 240);
+     --main_grey_border_outline: rgb(187, 187, 187);
+     --secondary_grey_Text: rgb(70, 70, 70);
+     --close_out_red: rgb(255, 73, 73);
+     --close_out_red2:rgb(150, 52, 52);
+     --blue4: rgb(0, 60, 255); 
+     --tertiary_white:rgb(212, 212, 212);
+     
+     /* Colors not being used */
+     --main_dark_blue: rgb(40, 0, 134);
+     --quadtrianary_white: rgb(233, 233, 233);
+}
+
+body {
+    background-color: var(--main_blue);
+    margin: 0;
+    text-align: center;
+    font-family: verdana;
+}
+
+#logoDiv img{
+    height: 95px;
+}
+
+    #loginBox{
+        background-color: var(--main_background_white);
+        width: 500px;
+        border: none;
+        z-index: 2;
+        top: calc(47% - 170px);
+        left: calc(50% - 250px);
+        position: absolute;
+        /* border-radius: 3px; */
+        /* margin-top: calc(38% - 170px); */
+        height: 300px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        box-shadow: 4px 4px 20px;
+        display: inline-block;
+    }
+        #errorPage{
+            background-color: var(--close_out_red);
+            position: absolute;
+            width: 78%;
+            top: 62px;
+            left: calc(50% - (390px / 2));
+        }
+        #loginTitle{
+            font-size: 25px;
+            margin-top: 1%;
+        }
+
+        #formHolder{
+            margin: 2%;
+            margin-top: 10%;
+        }
+            #signinForm input{
+                
+            }
+            #signinForm label{
+                
+            }
+            #signinForm div{
+                width: 100%;
+                height: 50px;
+            }
+            #formHolder button{
+
+            }
+            #submitButton{
+                border: none;
+                background-color: var(--secondary_White);
+                width: 120px;
+                height: 30px;
+                outline: .5px;
+                outline-style: solid;
+                outline-color: var(--main_grey_border_outline);
+            }  
+                #submitButton:hover{
+                    background-color: var(--secondary_blue);
+                    color: var(--main_background_white);
+                }
+                #submitButton:active{
+                    background-color: var(--tertiary_blue);                
+                }
+            #createAccount{
+                border: none;
+                background-color: var(--main_background_white);
+                color: black;
+                font-size: 13px;
+                padding: 7px;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                width: 120px;
+                text-decoration: none;
+                outline: .5px;
+                outline-style: solid;
+                outline-color: var( --main_grey_border_outline);
+            }
+                #createAccount:hover{
+                    background-color: var(--secondary_blue);
+                    color: var(--main_background_white);
+                }
+                #createAccount:active{
+                    background-color: var(--tertiary_blue);                
+                }
+

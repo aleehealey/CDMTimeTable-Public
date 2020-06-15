@@ -1,0 +1,282 @@
+<script src="mainPage/mainScript.js"></script>
+<script src="mainPage/date-en-US.js"></script>
+<link rel="stylesheet" href="mainPage/mainStyles.css">
+<title>Time Table</title>
+<html>
+
+<body onload="onStart(); ">
+    <div id="sideBlue">
+        <div id='logoDiv'></div>
+        <div id='informationDiv'>
+            <div id='todayInfo'></div>
+            <!-- <div id='recommendedToDoList'></div> -->
+        </div>
+        <div id='suggestionDiv'></div>
+    </div>
+    <div id="topWhite">
+        <div id='yearDiv'>2020</div>
+        <div id='monthDiv'>March</div>
+        <button id='logOutButton' onclick="logOut()">Log Out</button>
+        <button id='settingsButton' onclick="openSettings()">
+            <img src="mainPage/settings-cogwheel-button.png">
+        </button>
+    </div>
+    <div id="bottomWhite">
+        <div id='calendarDiv' onscroll="adjustCalendar();">
+            <table>
+                <colgroup>
+                    <col width='20' style="border-left: 0px;">
+                    <col width='20'>
+                    <col width='20'>
+                    <col width='20'>
+                    <col width='20'>
+                    <col width='20'>
+                    <col width='20' style="border-right: 0px;">
+                </colgroup>
+                <thead>
+                    <tr id='weekDayLabels'>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody id='calendarTableBody'>
+                    <!-- <tr>
+                        <td>   
+                            <button>
+                                <div>24</div>
+                                <ul>
+                                    <li>Wk7D1 HW</li>
+                                    <li>Out of this World Advice</li>
+                                </ul>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>
+                                <div>24</div>
+                                <ul>
+                                    <li>Wk7D1 HW</li>
+                                    <li>Out of this World Advice</li>
+                                </ul>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>
+                                <div>24</div>
+                                <ul>
+                                    <li>Wk7D1 HW</li>
+                                    <li>Out of this World Advice</li>
+                                </ul>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button>
+                                <div>24</div>
+                                <ul>
+                                    <li>Wk7D1 HW</li>
+                                    <li>Out of this World Advice</li>
+                                </ul>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                        <td>
+                            <button>
+                                <div>24</div>
+                            </button>
+                        </td>
+                    </tr> -->
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <div id='dayDescriptionDiv'></div>
+    <div id='firstTime'></div>
+    <div id='addEventDiv'></div>
+    <div id='settingsDiv'>
+        <button id='closeDayDescriptionButton' onclick="closeElement('settingsDiv');">X</button>
+        <div id='settingsDivTitleDiv'>Settings</div>
+        <p style='width: 90%; padding-left: 10px; padding-right: 10px; text-align: center;'>Note: Time Table is HTTPS protected and all your passwords are encrypted.</p>
+        <div class="settingsCategoryDiv" onclick="toggleElement('settingsChangePasswordDiv')">Change Password</div>
+        <div class="settingsDropDown" id="settingsChangePasswordDiv">
+            <div>Current Password</div>
+            <input type='password' id='currentPasswordInput'>
+            <div>New Password</div>
+            <input type='password' id='newPasswordInput'>
+            <div>Retype New Password</div>
+            <input type='password' id='newRetypePasswordInput'>
+        </div>
+        <div class="settingsCategoryDiv" id="settingsEnableGoogle">Enable Google Classroom
+            <label class="switch">
+                <input type="checkbox" onclick="">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <p style='width: 90%; padding-left: 10px; padding-right: 10px; text-align: center;' id='googleWarning'>You enabled Google Classroom!  You do not need to provide your email or password.  Upon start up, Google will ask you to log into your nmusd account.</p>
+        <div class="settingsCategoryDiv" id='settingsEnableSchoolloop'>Enable Schoolloop
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="settingsDropDown" id="settingsSchoolloopDiv">
+            <div class="username">
+                <div>Username :</div>
+                <input type='text' id='settingsSchoolloopUsername'>
+            </div>
+            <div class="password">
+                <div>Password :</div>
+                <input type='password' id="settingsSchoolloopPassword">
+            </div>
+        </div>
+        <div class="settingsCategoryDiv" id='settingsEnableSchoology'>Enable Schoology
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="settingsDropDown" id="settingsSchoologyDiv">
+            <div class="username">
+                <div>Username :</div>
+                <input type='text' id="settingsSchoologyUsername">
+            </div>
+            <div class="password">
+                <div>Password :</div>
+                <input type='password' id="settingsSchoologyPassword">
+            </div>
+        </div>
+        <button id='settingsSaveButton' onclick="sendNewSettings(); this.disabled = 'true';">Save</button>
+    </div>
+    <div id='deleteEventDiv'></div>
+    <button id='addEventButton' onclick="openAddEventPage();">+</button>
+    <button id='returnToTodayButton' onclick="returnToToday(); closeElement('returnToTodayButton')">Return to
+        Today</button>
+    <div id='printDiv'></div>
+
+</body>
+
+</html>

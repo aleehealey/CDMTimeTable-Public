@@ -1,0 +1,784 @@
+:root{
+    /* main colors are the darkest colors used and all secondary and tertiary colors after the main color are lighter than the main color
+        if there is a color darker than the main color it goes by a different name
+     */
+
+     /* Colors being used */
+    --main_blue:rgb(0, 7, 80);
+    --secondary_blue: rgb(13, 86, 190); 
+    --tertiary_blue: rgb(11, 71, 145);
+    --main_background_white: rgb(240, 240, 240);
+    --main_grey_border_outline: rgb(187, 187, 187);
+    --secondary_grey_Text: rgb(70, 70, 70);
+    --close_out_red: rgb(255, 73, 73);
+    --close_out_red2:rgb(150, 52, 52);
+    --blue4: rgb(0, 60, 255); 
+    --tertiary_white:rgb(212, 212, 212);
+    
+    /* Colors not being used */
+    --main_dark_blue: rgb(40, 0, 134);
+    --quadtrianary_white: rgb(233, 233, 233);
+}
+
+*:focus {
+    outline: none;
+}
+
+body{
+    margin: 0px;
+    color:var(--secondary_grey_Text);
+    font-family: 'Lucida Sans';
+    overflow: hidden;
+}
+
+#sideBlue{
+    background-color: var(--main_blue);
+    color: var(--main_background_white);
+    width: 20%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+    #logoDiv{
+        text-align: center;
+        font-size: 36px;
+    }
+    #informationDiv{
+
+    }
+
+
+    #todayInfo{
+        height: 70%;
+        overflow-y: auto;
+    }
+        #todayInfo div{
+            text-align: center;
+            font-size: 20px;
+        }
+        
+
+        #todayInfo ul{
+            padding-right: 2%;
+            padding-inline-start: 35px;
+        }
+        #todayInfo ul li{
+            margin-bottom: 3px;
+            
+        }
+
+    /* #recommendedToDoList{
+        height: 35%;
+        overflow-y: auto;
+    }
+    #recommendedToDoList div{
+        text-align: center;
+        font-size: 18px;
+    } */
+    #suggestionDiv{
+
+    }
+
+#topWhite{
+    width: calc(80% - 0px);
+    height: calc(12.5% - 0px);
+    float: right;
+    /* border: 5px; */
+    /* padding-bottom: 5px; */
+    /* border-bottom: black; */
+    border-width: 1px;
+    border-color: var(--secondary_grey_Text);
+    background-color: var(--main_background_white);
+    border-bottom-style: solid;
+    /* background-color: var(--main_white); */
+    /* margin: 5px; */
+}
+
+    #yearDiv{
+        width: 15%;
+        height: 100%;
+        /* vertical-align: middle; */
+        /* text-align: center; */
+        float: left;
+        font-size: 28px;
+        padding-top: 17.5px;
+        padding-left: 10px;
+    }
+
+    #monthDiv{
+        width: calc(28% - 10px);
+        height: 100%;
+        /* margin: 0px; */
+        float: left;
+        margin-left: 20%;
+        text-align: center;
+        font-size: 43px;
+        padding-top: 7px;
+    }
+
+    #logOutButton{    
+        width: 70px;
+        height: 30px;
+        border: 0;
+        outline: solid;
+        outline-color: var(--main_grey_border_outline);
+        color: var(--secondary_grey_Text);
+        outline-width: 1px;
+        /* float: right; */
+        /* border-width: .5px; */
+        position: absolute;
+        right: calc(5px + 50px + 5px);
+        top: calc((12.5% / 2) - (30px / 2));
+    }
+
+    #logOutButton:hover{ 
+        background-color: var(--close_out_red);
+        /* outline: 0; */
+        outline-color: var(--close_out_red);
+        color: var(--main_background_white);
+    }
+
+    #logOutButton:active{ 
+        background-color: var(--close_out_red2);
+        outline-color: var(--close_out_red2);
+    
+    }
+
+    #settingsButton{    
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        border: 0;
+        outline: solid;
+        outline-width: 1px;
+        /* float: right; */
+        outline-color: var(--main_grey_border_outline);
+        right: 9px;
+        top: calc((12.5% / 2) - (40px / 2));
+    }
+
+    #settingsButton:hover{    
+        background: var(--secondary_blue);
+        outline-color: var(--secondary_blue);
+    }
+
+    #settingsButton:active{   
+        background-color: var(--tertiary_blue); 
+    }
+
+    #settingsButton img{
+        max-width: 100%;
+    }
+
+#bottomWhite{
+    width: 80%;
+    height: calc(100% - 12.5%);
+    float: right;
+    background-color: var(--main_background_white);
+}
+
+    /* #weekDayLabels{
+        position: sticky;
+        top: 0px;
+        background-color: var(--main_background_white);
+        border-width: .5px;
+        border-color: var(--secondary_grey_Text);
+        border-bottom-style: solid;
+        z-index: 4;
+    }
+
+
+        #weekDayLabels table{
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+            border: 0px;
+        }
+
+            #weekDayLabels td{    
+                width: 14.2857%;
+            } */
+
+    #calendarDiv{
+        height: 100%;
+        overflow: auto;
+    }
+
+        #calendarDiv table{
+            width: 100%;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        #calendarDiv table div{
+        }
+        #calendarDiv table thead{
+        }
+
+        #calendarDiv table thead th{
+            position: sticky;
+            top: 0px;
+            outline-style: solid;
+            left: 0;
+            z-index: 4;
+            background-color: var(--main_background_white);
+            outline-width: 1px;
+        }
+
+        #calendarDiv table tbody{
+            height: 100%;
+            overflow: auto;
+        }
+
+
+        #calendarDiv table col{
+            border-width: 1px;
+            border-left-style: solid;
+            border-right-style: solid;
+        }
+        
+        #calendarDiv table tr{
+            border-width: 1px;
+            border-bottom-style: solid;
+        }
+
+        #calendarDiv table td{
+            width: 14.2857%;
+            min-width: 100px;
+        }
+
+        #calendarDiv table td button{
+            width: calc(100% + 2px);
+            background-color: var(--main_white);
+            border: 0px;
+            padding: 0px;
+            min-height: 140px;
+            margin: -1px;
+            position: relative;
+        }
+
+            #calendarDiv table td button:hover{    
+                background-color: var(--main_background_white);
+                z-index: 2;
+                width: 104%;
+                height: 104%;
+                padding: 2%;
+                box-shadow: 2px 2px 10px;
+            }
+            #calendarDiv table td button:active{    
+                /* background-color: var(--main_grey_border_outline); */
+            }
+            
+            #calendarDiv table td button div{
+                position: absolute;
+                top: 1px;
+                left: 1px;
+                background-color: var(--main_background_white);
+                color: var(--secondary_grey_Text);
+                font-size: 18px;
+                width: 20px;
+                text-align: left;
+            }
+        
+            #calendarDiv table td button ul{
+                padding-left: 16.5px;        
+                margin: 2px;
+                color: var(--secondary_grey_Text);
+            }
+
+                #calendarDiv table td button ul li{
+                    font-family: 'Lucida sans';
+                    padding-bottom: 2px;
+                    font-size: 14px;
+                }
+
+#dayDescriptionDiv{    
+    z-index: 5;
+    width: 70%;
+    position: absolute;
+    display: none;
+    top: 5%;
+    left: 15%;
+    overflow-y: auto;
+    border: none;
+    box-shadow: 4px 4px 10px;
+    height: 90%;
+    /* max-width: 500px; */
+    /* min-height: 200px; */
+    background-color: var(--main_background_white);
+}
+    
+    #closeDayDescriptionButton{
+        position: sticky;
+        top: 0px;
+        right: 0px;
+        float: right;
+        width: 39px;
+        /* margin: 6px; */
+        height: 39px;
+        font-size: 18px;
+        color: var(--secondary_grey_Text);
+        padding: 0px;
+        background-color: transparent;
+        border: 0;
+    }
+        #closeDayDescriptionButton:hover{
+            
+            background-color: var(--close_out_red);
+            color: var(--main_background_white);
+        }
+        #closeDayDescriptionButton:active{
+            
+            background-color: var(--close_out_red2);
+        }
+
+    #dayDescriptionDate{
+        text-align: center;
+        width: 40%;
+        margin: 8px;
+        margin-left: 30%;
+        font-size: 20px;
+        /* height: 20px; */
+        /* margin-right: 30%; */
+    }
+
+    #dayDescriptionInfo{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+        #dayDescriptionInfo ul a:visited{
+            color:rgb(0, 0, 238);
+        }
+
+        #windowAddEventButton{
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            height: 45px;
+            width: 45px;
+            border: 0;
+            border-radius: calc(45px / 2);
+            background-color: var(--main_blue);
+            color: var(--main_background_white);
+            font-size: 24px;
+        }
+        #windowAddEventButton:hover{
+            bottom: 19px;
+            right: 29px;
+            height: 47px;
+            width: 47px;
+            background-color: var(--secondary_blue);
+        }
+        #windowAddEventButton:active{
+            background-color: var(--tertiary_blue);
+        }
+
+
+#addEventButton{    
+    z-index: 4;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    height: 60px;
+    width: 60px;
+    /* border: solid; */
+    border-style: none;
+    border-radius: 30px;
+    /* border-width: 1px; */
+    /* border-color: var(--tertiary_white); */
+    color: var(--tertiary_white);
+    background-color: var(--main_blue);
+    font-size: 30px;
+}
+    #addEventButton:hover{
+        background-color: var(--secondary_blue);
+        width: 62.5px;
+        height: 62.5px;
+        right: calc(30px - (2.5px / 2));
+        bottom: calc(30px - (2.5px / 2));
+        /* border-style: outset; */
+        /* border-color: var(--main_grey_border_outline); */
+        border-radius: calc(62.5px / 2);
+        /* border-width: 2px; */
+        /* box-shadow: 5 5 10; */
+    }
+
+    #addEventButton:active{
+        /* border: 0px; */
+        /* border-style: inset; */
+        background-color: var(--tertiary_blue);
+    }
+
+#addEventDiv{
+    z-index: 5;
+    width: 70%;
+    position: absolute;
+    display: none;
+    top: 5%;
+    left: 15%;
+    overflow: auto;
+    border: none;
+    box-shadow: 4px 4px 10px;
+    height: 90%;
+    /* max-width: 500px; */
+    /* min-height: 200px; */
+    background-color: var(--main_background_white);
+}
+    #addEventDivTitle{
+        text-align: center;
+        width: 40%;
+        margin: 8px;
+        margin-left: 30%;
+        font-size: 20px;
+    }
+    
+    #addEventNameDiv{
+        float: left;
+        width: 50%;
+    }
+
+    #addEventNameDateDiv{
+        height: 21;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+            #addEventNameDiv{
+                float: left;
+                width: 50%;
+
+            }
+                #addEventNameDiv div{
+                    float: left;
+                    /* margin-left: 10%; */
+                    margin-right: 5px;
+                }
+                #addEventNameDiv input{
+                    width: calc(95% - 50px - 0% - 5px);
+                }
+            #addEventDateDiv{
+                float: right;
+                width: 50%;
+            }
+                #addEventDateDiv div{
+                    float: left;
+                    margin-right: 5px;
+                }
+                #addEventDateDiv input{
+                    width: calc((100% - 41px - 5px - 0% - (13px * 2)) / 3);
+                }
+    
+    #addEventClassDescriptionDiv{
+
+    }
+
+            #addEventClassDiv{
+                height: 20px;
+                padding-left: 5%;
+                margin-top: 10px;
+                padding-right: 5%;
+                margin-bottom: 10px;
+            }
+                #addEventClassDiv div{
+                    float: left;
+                    margin-right: 8.5px;
+
+                }
+                #addEventClassDiv input{
+                    width: calc(100% - 46px - 19px - 0%);
+                }
+            #addEventDescriptionDiv{
+
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+                #addEventDescriptionDiv div{
+
+                }
+                #addEventDescriptionDiv textarea{
+
+                    width: calc(100% - 10px);
+                    height: 65%;
+                
+                }
+    #addEventSubmitButton{
+        position: absolute;
+        bottom: 20px;
+        width: 70px;
+        height: 30px;
+        background-color: var(--main_background_white);
+        color: var(--secondary_grey_Text);
+        /* height: 20; */
+        left: calc(50% - (70px / 2));
+    }
+
+#returnToTodayButton{
+    
+    position: absolute;
+    z-index: 3;
+    bottom: 33px;
+    border: 0;
+    display: none;
+    width: 110px;
+    left: 21%;
+    background-color: var(--main_blue);
+    color: var(--main_background_white);
+    height: 32px;
+}
+
+    #returnToTodayButton:hover{
+        background-color: var(--secondary_blue);
+        height: 34px;
+        width: 112px;
+        left: calc(21% - 2px);
+        bottom: calc(33px - 2px);
+
+    }
+    #returnToTodayButton:active{
+        background-color: var(--tertiary_blue);        
+    }
+
+#settingsDiv{
+    z-index: 5;
+    width: 70%;
+    position: absolute;
+    display: none;
+    top: 5%;
+    left: 15%;
+    overflow: auto;
+    border: none;
+    box-shadow: 4px 4px 10px;
+    height: 90%;
+    /* max-width: 500px; */
+    /* min-height: 200px; */
+    background-color: var(--main_background_white);
+}
+
+    #settingsSaveButton{
+        position: static;
+        /* bottom: 20px; */
+        width: 70px;
+        margin-bottom: 20px;
+        height: 30px;
+        background-color: var(--main_background_white);
+        color: var(--secondary_grey_Text);
+        /* height: 20; */
+        margin-left: calc(50% - (70px / 2));
+    }
+    #settingsDivTitleDiv{
+
+        text-align: center;
+        width: 40%;
+        margin: 8px;
+        margin-left: 30%;
+        font-size: 20px;
+    }
+
+    #settingsChangePasswordDiv div{
+        text-align: center;
+        width: 180px;
+        margin-left: calc(50% - (180px / 2));
+    }
+    
+    #settingsChangePasswordDiv input{
+        margin-left: calc(50% - (30% / 2));
+    }
+    
+    .settingsCategoryDiv{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 5%;
+        padding-left: 5%;
+        /* border: solid; */
+        outline: solid;
+        outline-width: 1px;
+        margin-bottom: 5px;
+    }
+    
+    .settingsCategoryDiv:hover{ 
+        box-shadow: 4px 4px 10px;
+    }
+    .settingsCategoryDiv:active{ 
+        box-shadow: 4px 4px 10px;
+    }
+
+    .settingsDropDown{
+        display: none;
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    .settingsDropDown input{
+        width: 30%;
+        text-align: center;
+        /* margin-left: calc(50% - (166px / 2)); */
+    }
+
+    /* .settingsDropDown div{
+        text-align: center;
+        width: 100px;
+        float: left;
+    } */
+
+    .username{
+        padding-left: calc(50% - (100px / 2) - (30% / 2));
+        margin-bottom: 7px;
+    }
+
+    .username div{
+        float: left;
+        width: 100px;
+        text-align: center;
+    }
+
+    .password{
+        padding-left: calc(50% - (100px / 2) - (30% / 2));
+    }
+    .password div{
+        float: left;
+        width: 100px;
+        text-align: center;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 39px;
+        height: 22px;
+        float: right;
+      }
+      
+      .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 3.5px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+      
+      input:checked + .slider:before {
+        transform: translateX(17px);
+      }
+      
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+      
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+#deleteEventButton{
+    border: 0;
+    width: 62px;
+    height: 62px;
+    left: 10px;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 22px;
+    background-color: transparent;
+}
+#deleteEventButton:hover{
+    background-color: var(--secondary_blue);
+}
+#deleteEventButton:active{
+    background-color: var(--tertiary_blue);
+}
+#deleteEventButton img{
+    width: 50px;
+}
+
+#deleteEventDiv{
+    z-index: 5;
+    width: 70%;
+    position: absolute;
+    display: none;
+    top: 5%;
+    left: 15%;
+    overflow: auto;
+    border: none;
+    box-shadow: 4px 4px 10px;
+    height: 90%;
+    /* max-width: 500px; */
+    /* min-height: 200px; */
+    background-color: var(--main_background_white);
+}
+
+#deleteEventDiv ul button{
+    width: 100%;
+}
+#finishDeleteButton{
+    
+    position: static;
+    /* bottom: 20px; */
+    width: 70px;
+    height: 30px;
+    background-color: var(--main_background_white);
+    color: var(--secondary_grey_Text);
+    /* height: 20; */
+    margin-left: calc(50% - (70px / 2));
+    margin-bottom: 20px;
+
+}
+
+
+#firstTime{
+    z-index: 5;
+    width: 70%;
+    position: absolute;
+    display: none;
+    top: 5%;
+    left: 15%;
+    overflow: auto;
+    border: none;
+    box-shadow: 4px 4px 10px;
+    height: 90%;
+    /* max-width: 500px; */
+    /* min-height: 200px; */
+    background-color: var(--main_background_white);
+}
+
+
+    #firstTime p{
+        width: 96%; 
+        padding-left: 10px; 
+        padding-right: 10px; 
+        text-align: center;
+        margin-top: 35px;
+    }
+    

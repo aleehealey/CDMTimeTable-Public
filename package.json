@@ -1,0 +1,23 @@
+{
+  "name": "dr.-schedule",
+  "version": "1.0.0",
+  "description": "This is the scheduling website, better name needed",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Austin Leehealey",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cheerio": "^1.0.0-rc.3",
+    "crypto-js": "^4.0.0",
+    "generate-password": "^1.4.2",
+    "googleapis": "^39.2.0",
+    "open": "^7.0.3",
+    "openssl": "^1.1.0",
+    "request": "^2.88.0",
+    "server": "^1.0.21",
+    "sync-request": "^6.1.0"
+  }
+}
